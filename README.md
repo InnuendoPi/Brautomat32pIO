@@ -4,8 +4,6 @@ Testversion Brautomat32 platformIO Version 5.1.4-586
 
 Hinweis: die Version pIO ist NICHT kompatibel mit der Version Brautomat32 (partition layout). Die Konfigzurationsdatei (config.txt) ist identisch.\
 
-
-
 Firmware ESP32 D1 mini: [Brautomat32](https://github.com/InnuendoPi/Brautomat32)\
 Firmware ESP8266 D1 mini: [Brautomat](https://github.com/InnuendoPi/Brautomat)
 
