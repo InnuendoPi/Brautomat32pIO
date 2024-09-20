@@ -1,6 +1,6 @@
 # Der Brautomat für ESP32 platformIO build
 
-Testversion Brautomat32 platformIO Version 5.1.4-586
+Testversion Brautomat32 platformIO Version 4.4.7
 
 Hinweis: die Version pIO ist NICHT kompatibel mit der Version Brautomat32 (partition layout). Die Konfigzurationsdatei (config.txt) ist identisch.\
 
