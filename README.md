@@ -1,6 +1,6 @@
 # Brautomat ESP32 platformIO build
 
-Brautomat32 platformIO version 5.1.4
+Brautomat32 platformIO espressif Arduino Core 3.0.7 IDF v5.1.4+ (pioarduino)
 
 _pIO versions are not compatible with Brautomat32: you can not upgrade from brautomat32 to brautomat32 pIO due to different partition layout. Use backup & restore for your configuration!_
 
