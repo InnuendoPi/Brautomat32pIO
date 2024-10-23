@@ -1,20 +1,20 @@
-# Der Brautomat für ESP32 platformIO build
+# Brautomat ESP32 platformIO build
 
-Testversion Brautomat32 platformIO Version 4.4.7
+Brautomat32 platformIO version 5.1.4
 
-Hinweis: die Version pIO ist NICHT kompatibel mit der Version Brautomat32 (partition layout). Die Konfigzurationsdatei (config.txt) ist identisch.\
+_pIO versions are not compatible with Brautomat32: you can not upgrade from brautomat32 to brautomat32 pIO due to different partition layout. Use backup & restore for your configuration!_
 
 Firmware ESP32 D1 mini: [Brautomat32](https://github.com/InnuendoPi/Brautomat32)\
 Firmware ESP8266 D1 mini: [Brautomat](https://github.com/InnuendoPi/Brautomat)
 
-## 📚 Dokumentation
+## 📚 Documentation
 
-Beschreibung & Anleitung: [https://innuendopi.gitbook.io/brautomat32/](https://innuendopi.gitbook.io/brautomat32/)\
-Diskussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)
+Docs (german language): [https://innuendopi.gitbook.io/brautomat32/](https://innuendopi.gitbook.io/brautomat32/)\
+Discussion (german forum): [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)
 
-## 📘 Pin-Belegung
+## 📘 Pinout ESP32 D1
 
-Der ESP32 D1 bietet ein Pinout passend zum ESP8266 (GPIO D0 bis D8). Die dargestellte Pinbelegung basiert auf dem Modul ESP32 D1 Mini NodeMCU von [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)
+Pinout below based on ESP32 D1 Mini NodeMCU [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)
 
 | Bezeichner | GPIO    | Input  | Output | Beschreibung                                  |
 | ---------- | ------- | ------ | ------ | --------------------------------------------- |
@@ -42,6 +42,6 @@ Der ESP32 D1 bietet ein Pinout passend zum ESP8266 (GPIO D0 bis D8). Die dargest
 
 Pins connected to onboard flash and not recommended for GPIO use: CMD (IO11), CLK (IO6), SD0/SDD (IO7), SD1 (IO8), SD2 (IO9) and SD3 (IO10)
 
-## 🔉MP3 Dateien
+## 🔉MP3 files
 
 _Legal note: "Boxing Bell" (info), "Short School Bell" (error), "Ding sound effect" (warning) und "Success sound effect" (success) mp3 von Free Sounds Library_ [http://www.freesoundslibrary.com](http://www.freesoundslibrary.com) _Licence: Attribution 4.0 International (CC BY 4.0). You are allowed to use sound effects free of charge and royalty free in your multimedia projects for commercial or non-commercial purposes._
