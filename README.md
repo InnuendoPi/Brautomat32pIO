@@ -1,11 +1,20 @@
 # Brautomat ESP32 platformIO build
 
-Brautomat32 platformIO espressif Arduino Core 3.0.7 IDF v5.1.4+ (pioarduino)
+Brautomat32 V 1.47.5 platformIO espressif Arduino Core 3.0.7 IDF v5.1.4+ (pioarduino)
+
+Brautomat 1.47+ expands the range of functions with a second induction hob GGM IDS. If you want you can use up to three kettles:
+
+- brew kettle, first induction hob GGM IDS
+- mash tun, the new second induction hob GGM IDS
+- hot liquid tank (sparge water)
+
+1th note: contrary to the manual below special funktions do not need to have a temperature and a time set to zero anymore. Now you can use special functions to start your hlt with a setpoint or a mash rests on your second induction hob.
+
+2nd note: Brautomat32 1.47 platformIO is an early alpha test.
+
+3rd note: have fun and send feedback
 
 _pIO versions are not compatible with Brautomat32: you can not upgrade from brautomat32 to brautomat32 pIO due to different partition layout. Use backup & restore for your configuration!_
-
-Firmware ESP32 D1 mini: [Brautomat32](https://github.com/InnuendoPi/Brautomat32)\
-Firmware ESP8266 D1 mini: [Brautomat](https://github.com/InnuendoPi/Brautomat)
 
 ## 📚 Documentation
 
