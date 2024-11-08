@@ -1,6 +1,6 @@
 # Brautomat ESP32 platformIO build
 
-Brautomat32 V 1.47.5 platformIO espressif Arduino Core 3.0.7 IDF v5.1.4+ (pioarduino)
+Brautomat32 V 1.47.7 platformIO espressif Arduino Core 3.0.7 IDF v5.1.4+ (pioarduino)
 
 Brautomat 1.47+ expands the range of functions with a second induction hob GGM IDS. If you want you can use up to three kettles:
 
@@ -15,6 +15,20 @@ Brautomat 1.47+ expands the range of functions with a second induction hob GGM I
 3rd note: have fun and send feedback
 
 _pIO versions are not compatible with Brautomat32: you can not upgrade from brautomat32 to brautomat32 pIO due to different partition layout. Use backup & restore for your configuration!_
+
+## 📚 Changelog
+
+Version 1.47.7
+
+- new:          enabled webhooks on actors w/o GPIO. Example Shelly 1PM: <http://192.168.x.x/relay/0?turn=> without trailing on off
+- changed:      web interface actors visability
+- fix:          default kettle name
+- new:          second induction hob "SUD"
+- new:          new method SUD for mash plan include temperature and timer
+- changed:      firmware nextion display kettle page
+- Fix:          sensor search DS18B20 addresses
+- Update:       VSCode 1.95
+- Update:       ESP32 Arduino 3.0.7 ESP-IDF v5.1.4
 
 ## 📚 Documentation
 
