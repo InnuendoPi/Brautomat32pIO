@@ -4,11 +4,13 @@
 .vscode/launch.json
 .vscode/ipch
 .vscode/
+.dummy/
 include/
 lib/
 src/
 Test/
 Web/
+managed_components/
 build/boot_app0.bin
 build/bootloader.bin
 build/esptool.exe
@@ -19,3 +21,6 @@ boards/
 *.ini
 *.py
 *.txt
+dependencies.lock
+sdkconfig.defaults
+sdkconfig.wemos_d1_mini32_IDF5dev

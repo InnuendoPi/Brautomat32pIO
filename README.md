@@ -18,8 +18,21 @@ _pIO versions are not compatible with Brautomat32: you can not upgrade from brau
 
 ## 📚 Changelog
 
-Version 1.47.7
+Version 1.47.11
 
+- changed:      switched to pioarduino IDE 1.0.4
+- changed:      [switched to pioarduino develop platform](https://github.com/pioarduino/platform-espressif32.git#develop)
+- fix:          typedef time_t
+- fix:          predefined logging for debug removed
+- new:          Toast message, when rest time was automatically adjusted aufter restart
+- fix:          fixed handling webhook hlt
+- fix:          TickerMash state incorrect after restart, when autonext disabled
+- changed:      duration of a power interruption during an active rest (active timer) is automatically adjusted from the rest time after the restart
+- new:          time stamp added to brewing state
+- changed:      interval for saving brewing state reduced to every 10 seconds
+- fix:          display rest time after reset or power interruption inccorect
+- fix:          stop auto start  mash plan when switching hlt or mlt on/off
+- new:          hlt webhook
 - new:          enabled webhooks on actors w/o GPIO. Example Shelly 1PM: <http://192.168.x.x/relay/0?turn=> without trailing on off
 - changed:      web interface actors visability
 - fix:          default kettle name
