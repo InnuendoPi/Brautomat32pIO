@@ -1,6 +1,6 @@
 # Brautomat ESP32 platformIO build
 
-Brautomat32 V 1.47.7 platformIO espressif Arduino Core 3.0.7 IDF v5.1.4+ (pioarduino)
+Brautomat32 V 1.47 platformIO espressif Arduino Core 3.1.0 IDF v5.3 (pioarduino)
 
 Brautomat 1.47+ expands the range of functions with a second induction hob GGM IDS. If you want you can use up to three kettles:
 
@@ -10,7 +10,7 @@ Brautomat 1.47+ expands the range of functions with a second induction hob GGM I
 
 1th note: contrary to the manual below special funktions do not need to have a temperature and a time set to zero anymore. Now you can use special functions to start your hlt with a setpoint or a mash rests on your second induction hob.
 
-2nd note: Brautomat32 1.47 platformIO is an early alpha test.
+2nd note: Brautomat32 1.47 platformIO is an early beta.
 
 3rd note: have fun and send feedback
 
@@ -18,13 +18,24 @@ _pIO versions are not compatible with Brautomat32: you can not upgrade from brau
 
 ## 📚 Changelog
 
-Version 1.47.11
+Version 1.47.4
 
+- Update:       Arduino core 3.1.0 based on IDF 5.3.2.241210
+- Replaced:     Replaced deprecated lib EEPROM with Preferences for ESP32 IDF5 (save states in flash)
+- Error:        lib EEPROM not working in IDF 5 environments
+- Fix:          Casting private ArduinoJSON objects (Update 7.3)
+- Update:       ArduinoJSON 7.3
+- Update:       VSCode 1.96
+- Fix:          PID Controller compute will be ignored in sensor error events (PID input -127 degrees)
+- Fix:          read mashplan after power disconnect: fixed error addressing correct kettle MAISCHE, SUD or HLT
+- Fix:          error fixed when adding or removing mash steps while mashplan is runing
+- Update:       Nextion Display files TFT
+- Fix:          Brautomat states after power disconnect
 - changed:      switched to pioarduino IDE 1.0.4
 - changed:      [switched to pioarduino develop platform](https://github.com/pioarduino/platform-espressif32.git#develop)
 - fix:          typedef time_t
 - fix:          predefined logging for debug removed
-- new:          Toast message, when rest time was automatically adjusted aufter restart
+- new:          Toast message, when rest time was automatically adjusted after restart
 - fix:          fixed handling webhook hlt
 - fix:          TickerMash state incorrect after restart, when autonext disabled
 - changed:      duration of a power interruption during an active rest (active timer) is automatically adjusted from the rest time after the restart
