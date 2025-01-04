@@ -18,8 +18,17 @@ _pIO versions are not compatible with Brautomat32: you can not upgrade from brau
 
 ## 📚 Changelog
 
-Version 1.47.4
+Version 1.47.6
 
+- Fix:          fixed wrong setpoint for kettle maische, when changing PID parameters while brewing
+- Fix:          fixed read wrong value for object powerButton from display in manual mode
+- changed:      modul checkIDSState changed handling kettle Sud
+- Neu:          device type relay added to kttle Maische and Sud
+- Fix:          some corrections in language files for object Sud
+- Fix:          fixed handling pin Interrupt kettle Sud
+- Fix:          reworked task watchdog timer ESP32 IDF5.x (platformIO)
+- changed:      [switched to pioarduino stable branch](https://github.com/pioarduino/platform-espressif32/releases/download/stable/platform-espressif32.zip)
+- Fix:          typo debug output flash (read/write/erase)
 - Update:       Arduino core 3.1.0 based on IDF 5.3.2.241210
 - Replaced:     Replaced deprecated lib EEPROM with Preferences for ESP32 IDF5 (save states in flash)
 - Error:        lib EEPROM not working in IDF 5 environments
@@ -63,7 +72,7 @@ Discussion (german forum): [https://hobbybrauer.de/forum/viewtopic.php?p=486504#
 
 Pinout below based on ESP32 D1 Mini NodeMCU [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)
 
-| Bezeichner | GPIO    | Input  | Output | Beschreibung                                  |
+| Name       | GPIO    | Input  | Output | Notes                                         |
 | ---------- | ------- | ------ | ------ | --------------------------------------------- |
 | D0         | GPIO026 | ok     | ok     |                                               |
 | D1         | GPIO022 | ok     | ok     |                                               |
@@ -73,21 +82,23 @@ Pinout below based on ESP32 D1 Mini NodeMCU [AZ-Delivery](https://www.az-deliver
 | D5         | GPIO018 | ok     | ok     | GGM IDS Interrupt blue/green                  |
 | D6         | GPIO019 | ok     | ok     | GGM IDS Command yellow                        |
 | D7         | GPIO023 | ok     | ok     | GGM IDS Relay white                           |
-| D8         | GPIO005 | ok     | ok     | Buzzer                                        |
+| D8         | GPIO005 | ok     | ok     | Buzzer, outputs PWM signal at boot            |
 | D9         | GPIO027 | ok     | ok     | SCLK                                          |
 | D10        | GPIO025 | ok     | ok     | MISO                                          |
 | D11        | GPIO032 | ok     | ok     | MOSI                                          |
-| D12        | GPIO012 | (ok)   | ok     | TDI, boot fails if pulled high, strapping pin |
+| D12        | GPIO012 | (ok)   | ok     | TDI, boot fails if pulled high                |
 | D13        | GPIO004 | ok     | ok     | CS0                                           |
 | D14        | GPIO000 | pullUp | (ok)   | must be low to enter flash mode               |
 | D15        | GPIO002 | ok     | ok     | onboard LED, must be low to enter flash mode  |
 | D16        | GPIO033 | ok     | ok     | CS1                                           |
-| D17        | GPIO014 | ok     | ok     | CS2                                           |
-| D18        | GPIO015 | ok     | ok     |                                               |
+| D17        | GPIO014 | ok     | ok     | CS2, outputs PWM signal at boot               |
+| D18        | GPIO015 | ok     | ok     | outputs PWM signal at boot                    |
 | D19        | GPIO013 | ok     | ok     |                                               |
+| D20        | GPIO010 | (ok)   | (ok)   | SD3 SPI flash                                 |
 ||||||
 
-Pins connected to onboard flash and not recommended for GPIO use: CMD (IO11), CLK (IO6), SD0/SDD (IO7), SD1 (IO8), SD2 (IO9) and SD3 (IO10)
+Pins connected to the integrated SPI flash and not recommended for other use: CLK (IO6), SD0/SDD (IO7), SD1 (IO8), SD2 (IO9), SD3 (IO10), CMD (IO11)\
+GPIOs 34 to 39 are input only pins.
 
 ## 🔉MP3 files
 
