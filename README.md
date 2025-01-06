@@ -18,8 +18,11 @@ _pIO versions are not compatible with Brautomat32: you can not upgrade from brau
 
 ## 📚 Changelog
 
-Version 1.47.6
+Version 1.47.7
 
+- Fix:          WebIf links to gitbook
+- Add:          some sensor infomrations in tab sysinfo in modal window sensors
+- Fix:          all PID parameters are now editable while brewing
 - Fix:          fixed wrong setpoint for kettle maische, when changing PID parameters while brewing
 - Fix:          fixed read wrong value for object powerButton from display in manual mode
 - changed:      modul checkIDSState changed handling kettle Sud
