@@ -18,8 +18,9 @@ _pIO versions are not compatible with Brautomat32: you can not upgrade from brau
 
 ## 📚 Changelog
 
-Version 1.47.7
+Version 1.47.8
 
+- Update:       Arduino core 3.1.1 based on IDF 5.3.2.250106
 - Fix:          WebIf links to gitbook
 - Add:          some sensor infomrations in tab sysinfo in modal window sensors
 - Fix:          all PID parameters are now editable while brewing
