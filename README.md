@@ -1,80 +1,112 @@
-# Brautomat ESP32 platformIO build
+# Brautomat ESP32pIO
 
-Brautomat32 V 1.47 platformIO espressif Arduino Core 3.1.0 IDF v5.3 (pioarduino)
+Brautomat32 platformIO Espressif Arduino Core 3.1.0 IDF v5.3 (pioarduino)
 
-Brautomat 1.47+ expands the range of functions with a second induction hob GGM IDS. If you want you can use up to three kettles:
+Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP32 D1 mini. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
 
-- brew kettle, first induction hob GGM IDS
-- mash tun, the new second induction hob GGM IDS
-- hot liquid tank (sparge water)
-
-1th note: contrary to the manual below special funktions do not need to have a temperature and a time set to zero anymore. Now you can use special functions to start your hlt with a setpoint or a mash rests on your second induction hob.
-
-2nd note: Brautomat32 1.47 platformIO is an early beta.
-
-3rd note: have fun and send feedback
-
-_pIO versions are not compatible with Brautomat32: you can not upgrade from brautomat32 to brautomat32 pIO due to different partition layout. Use backup & restore for your configuration!_
+_pIO Versionen sind nicht kompatibel mit Brautomat32. Vor der Installation die Konfiguration und die Maischepläne sichern!_
 
 ## 📚 Changelog
 
-Version 1.47.8
+Version 1.48
 
-- Update:       Arduino core 3.1.1 based on IDF 5.3.2.250106
-- Fix:          WebIf links to gitbook
-- Add:          some sensor infomrations in tab sysinfo in modal window sensors
-- Fix:          all PID parameters are now editable while brewing
-- Fix:          fixed wrong setpoint for kettle maische, when changing PID parameters while brewing
-- Fix:          fixed read wrong value for object powerButton from display in manual mode
-- changed:      modul checkIDSState changed handling kettle Sud
-- Neu:          device type relay added to kttle Maische and Sud
-- Fix:          some corrections in language files for object Sud
-- Fix:          fixed handling pin Interrupt kettle Sud
-- Fix:          reworked task watchdog timer ESP32 IDF5.x (platformIO)
-- changed:      [switched to pioarduino stable branch](https://github.com/pioarduino/platform-espressif32/releases/download/stable/platform-espressif32.zip)
-- Fix:          typo debug output flash (read/write/erase)
-- Update:       Arduino core 3.1.0 based on IDF 5.3.2.241210
-- Replaced:     Replaced deprecated lib EEPROM with Preferences for ESP32 IDF5 (save states in flash)
-- Error:        lib EEPROM not working in IDF 5 environments
-- Fix:          Casting private ArduinoJSON objects (Update 7.3)
-- Update:       ArduinoJSON 7.3
-- Update:       VSCode 1.96
-- Fix:          PID Controller compute will be ignored in sensor error events (PID input -127 degrees)
-- Fix:          read mashplan after power disconnect: fixed error addressing correct kettle MAISCHE, SUD or HLT
-- Fix:          error fixed when adding or removing mash steps while mashplan is runing
-- Update:       Nextion Display files TFT
-- Fix:          Brautomat states after power disconnect
-- changed:      switched to pioarduino IDE 1.0.4
-- changed:      [switched to pioarduino develop platform](https://github.com/pioarduino/platform-espressif32.git#develop)
-- fix:          typedef time_t
-- fix:          predefined logging for debug removed
-- new:          Toast message, when rest time was automatically adjusted after restart
-- fix:          fixed handling webhook hlt
-- fix:          TickerMash state incorrect after restart, when autonext disabled
-- changed:      duration of a power interruption during an active rest (active timer) is automatically adjusted from the rest time after the restart
-- new:          time stamp added to brewing state
-- changed:      interval for saving brewing state reduced to every 10 seconds
-- fix:          display rest time after reset or power interruption inccorect
-- fix:          stop auto start  mash plan when switching hlt or mlt on/off
-- new:          hlt webhook
-- new:          enabled webhooks on actors w/o GPIO. Example Shelly 1PM: <http://192.168.x.x/relay/0?turn=> without trailing on off
-- changed:      web interface actors visability
-- fix:          default kettle name
-- new:          second induction hob "SUD"
-- new:          new method SUD for mash plan include temperature and timer
-- changed:      firmware nextion display kettle page
-- Fix:          sensor search DS18B20 addresses
-- Update:       VSCode 1.95
-- Update:       ESP32 Arduino 3.0.7 ESP-IDF v5.1.4
+* Update:       Arduino core 3.1.1 based on IDF 5.3.2.250106
+* Neu:          Link nach gitbook für Parameter Voreinstellungen Import eingefügt
+* Geändert:     bei Klick auf Prev oder Next wird der Status Button Play zurückgesetzt (ein dekativiertes autonext wird aufgehoben)
+* Fix:          Auswertung Sonderbefehle bei Klick auf den Button Play korrigiert
+* Fix:          der PID Controller wurde mit dem Sonderbefehl IDS nicht korrekt gestartet, wenn die IDS ausgeschaltet war
+* Fix:          Verzögerung Ablauf Maischeplan behoben, wenn die Rastdauer mit 0s eingetragen war
+* Geändert:     Parameter Temperatur Kochen wurde in die Einstellungen Maischeplan verschoben
+* Fix:          InnuAPID PID Controller debug Ausgaben aktuelle Leistung typo
+* Fix:          Korrekturen html und CSS
+* Fix:          Korrektur Links nach gitbook
+* Geändert:     Sensor Informationen als Tab eingefügt
+* Fix:          Korrektur Links nach gitbook
+* Geändert:     Sensor Informationen als Tab eingefügt
+* Fix:          es ist nun möglich, alle PID Parameter für Maische, Sud und HLT bei aktivem PID Controller (beim Brauen) anzupassen
+* Fix:          wenn SoftSerial keinen oder einen fehlerhaften Wert für den PowerButton von Display im manuellen Modus liefert
+* Geändert:     Modul checkIDSState Kessel Sud
+* Neu:          Auswahl Gerätetyp GGM oder Relais für Maische und Sud
+* Fix:          Korrektur Sprachdateien für das Objekt SUD
+* Fix:          Korrektur Pin Interrupt handling zweite GGM IDS
+* Fix:          Korrektur task watchdog timer ESP32 IDF5.x (platformIO)
+* Update:       Erläuterungen Steuerbefehle in der Anleitung erweitert
+* Fix:          Debug Ausgaben Braustatus Flash (read/write/erase)
+* Geändert:     deprecated lib EEPROM durch Preferences für ESP32 ersetzt (save states in flash)
+* Fix:          Casting private ArduinoJSON objects (Update 7.3)
+* Update:       ArduinoJSON 7.3
+* Update:       VSCode 1.96
+* Fix:          die Berechnung der erforderlichen Leistung IDS (PID Controller) bei einem Sensorfehler (-127 Grad) nicht mehr ausgeführt
+* Fix:          Einlesen Maischeplan nach Stromunterbrechung: Zuweisung Maische, Sud, HLT, Steuerbefehl oder Aktor korrigiert
+* Fix:          Fehler Hinzufügen/Entfernen von Maischeschritte behoben, wenn der Brauprozess gestartet ist
+* Update:       Nextion Display Dateien aktualisiert
+* Fix:          Brautomat Status nach Stromunterbrechung (verschiedene Zustände korrigiert)
+* Fix:          typedef time_t
+* Fix:          Das Logging für den Maischeprozess war zu Debugzwecken fest auf VERBOSE eingestellt
+* Neu:          Toast Message, wenn der Rast Timer nach einer Unterbrechung angeapsst wurde
+* Fix:          Webhook Nachguss wurde nicht korrekt verarbeitet
+* Fix:          TickerMash Status war nach Reset/Stromunterbrechung bei deaktiviertem autonext nicht korrekt
+* Geändert:     die Dauer einer Stromunterbrechung während einer aktiven Rast (Timer läuft), wird nach dem Neustart von der Rastzeit automatisch abgezogen
+* Neu:          es wird ein Zeitstempel mitgespeichert, um die Dauer einer Unterbrechung bemessen zu können
+* Geändert:     die aktuelle Rastzeit wird nun im 10s Takt in Sekunden statt Restminuten alle 60s gespeichert
+* Fix:          Autorestart Maischestep nach Reset oder Ausschalten, wenn Timer noch nicht gestartet war
+* Fix:          Anzeige Restzeit Maischestep nach Reset oder Ausschalten nicht korrekt
+* Fix:          Nachguss/Sud ein oder ausschalten ohne Braustart hat fehlerhaft den Brauprozess gestartet.
+* Neu:          Webhook für Nachguss
+* Neu:          Webhook für Aktoren
+* Geändert:     im WebIf Aktoren werden PWM und invertieren passend zur Auswahl GPIO/Webhook ein- bzw. ausgeblendet
+* Fix:          default Kesselname gesetzt
+* Neu:          Eigenschaft Name hinzugefügt
+* Neu:          zweites Induktionskochfeld "SUD" kann mit dem Brautomat gesteuert werden
+* Neu:          neuer Sonderbefehl SUD für die zweite GGM IDS
+* Neu:          Display Firmware Anzeige Kesselübersicht um zweites Induktionskochfeld erweitert
+* Geändert:     Sonderbefehle können auch Dauer und Temperatur verarbeiten
+* Geändert:     im Display wird auf der Seite Kesselübersicht der Name angezeigt
+* Fix:          Suche nach DS18B20 Adressen korrigiert
+* Update:       VSCode 1.95
+* Update:       ESP32 Arduino 3.0.7 ESP-IDF v5.1.4
 
-## 📚 Documentation
+## Hauptfunktionen
 
-Docs (german language): [https://innuendopi.gitbook.io/brautomat32/](https://innuendopi.gitbook.io/brautomat32/)\
-Discussion (german forum): [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)
+* Steuerung der Induktionskochfelder GGM
+  * GGM IDS1
+  * GGM IDS2
+* integrierter PID-Controller
+* PID-AutoTune
+* Temperatursensoren
+  * Dallas DS18B20
+  * PT100 und PT1000 (MAX31865)
+* Maischeplan
+  * Automatisches Anfahren und halten der Rasttemperaturen
+  * Würzekochen
+  * Alarmierung für Hopfengaben
+  * Bis zu 20 Teilschritte
+* Verwaltung von Maischeplänen
+* Steuerung Induktionskochfeld als Maischepfanne
+* Steuerung Induktionskochfeld als Sudpfanne (Würzepfanne)
+* Steuerung Nachguss (HLT)
+* Steuerung von Aktoren, wie bspw. Rührwerk, Pumpen, etc.
+* PWM für Aktoren
+* Audio Alarme
+  * MP3 Alarme
+  * Akkustische Signale (Piezo Buzzer)
+* Toasts Nachrichten
+* Temperaturverlauf im Maischeprozess als Grafik (line chart)
+* Rezept Import
+  * kleinen Brauhelfer2
+  * Maische Malz und Mehr
+  * BrewFather
+* Rezept Export
+* Unterstützung für 3,5" HMI Touchdisplay Nextion
+
+## 📚 Dokumentation
+
+Beschreibung & Anleitung: [https://innuendopi.gitbook.io/brautomat32/](https://innuendopi.gitbook.io/brautomat32/)\
+Diskussion: [https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504](https://hobbybrauer.de/forum/viewtopic.php?p=486504#p486504)\
 
 ## 📘 Pinout ESP32 D1
 
-Pinout below based on ESP32 D1 Mini NodeMCU [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)
+Pinout based on ESP32 D1 Mini NodeMCU [AZ-Delivery](https://www.az-delivery.de/products/esp32-d1-mini)
 
 | Name       | GPIO    | Input  | Output | Notes                                         |
 | ---------- | ------- | ------ | ------ | --------------------------------------------- |
