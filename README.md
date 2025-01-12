@@ -1,6 +1,6 @@
 # Brautomat ESP32pIO
 
-Brautomat32 platformIO Espressif Arduino Core 3.1.0 IDF v5.3 (pioarduino)
+Brautomat32 platformIO Espressif Arduino Core 3.1 IDF v5.3 (pioarduino)
 
 Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und IDS2 mit einem ESP32 D1 mini. Der Brautomat bietet eine intuitiv einfach zu bedienende Steuerung.
 
