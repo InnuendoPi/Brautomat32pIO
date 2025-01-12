@@ -6,6 +6,39 @@ Der Brautomat ist eine Brausteuerung für die Induktionskochfelder GGM IDS1 und 
 
 _pIO Versionen sind nicht kompatibel mit Brautomat32. Vor der Installation die Konfiguration und die Maischepläne sichern!_
 
+## Hauptfunktionen
+
+* Steuerung der Induktionskochfelder GGM
+  * GGM IDS1
+  * GGM IDS2
+* integrierter PID-Controller
+* PID-AutoTune
+* Temperatursensoren
+  * Dallas DS18B20
+  * PT100 und PT1000 (MAX31865)
+* Maischeplan
+  * Automatisches Anfahren und halten der Rasttemperaturen
+  * Würzekochen
+  * Alarmierung für Hopfengaben
+  * Bis zu 20 Teilschritte
+* Verwaltung von Maischeplänen
+* Steuerung Induktionskochfeld als Maischepfanne
+* Steuerung Induktionskochfeld als Sudpfanne (Würzepfanne)
+* Steuerung Nachguss (HLT)
+* Steuerung von Aktoren, wie bspw. Rührwerk, Pumpen, etc.
+* PWM für Aktoren
+* Audio Alarme
+  * MP3 Alarme
+  * Akkustische Signale (Piezo Buzzer)
+* Toasts Nachrichten
+* Temperaturverlauf im Maischeprozess als Grafik (line chart)
+* Rezept Import
+  * kleinen Brauhelfer2
+  * Maische Malz und Mehr
+  * BrewFather
+* Rezept Export
+* Unterstützung für 3,5" HMI Touchdisplay Nextion
+
 ## 📚 Changelog
 
 Version 1.48
@@ -65,39 +98,6 @@ Version 1.48
 * Fix:          Suche nach DS18B20 Adressen korrigiert
 * Update:       VSCode 1.95
 * Update:       ESP32 Arduino 3.0.7 ESP-IDF v5.1.4
-
-## Hauptfunktionen
-
-* Steuerung der Induktionskochfelder GGM
-  * GGM IDS1
-  * GGM IDS2
-* integrierter PID-Controller
-* PID-AutoTune
-* Temperatursensoren
-  * Dallas DS18B20
-  * PT100 und PT1000 (MAX31865)
-* Maischeplan
-  * Automatisches Anfahren und halten der Rasttemperaturen
-  * Würzekochen
-  * Alarmierung für Hopfengaben
-  * Bis zu 20 Teilschritte
-* Verwaltung von Maischeplänen
-* Steuerung Induktionskochfeld als Maischepfanne
-* Steuerung Induktionskochfeld als Sudpfanne (Würzepfanne)
-* Steuerung Nachguss (HLT)
-* Steuerung von Aktoren, wie bspw. Rührwerk, Pumpen, etc.
-* PWM für Aktoren
-* Audio Alarme
-  * MP3 Alarme
-  * Akkustische Signale (Piezo Buzzer)
-* Toasts Nachrichten
-* Temperaturverlauf im Maischeprozess als Grafik (line chart)
-* Rezept Import
-  * kleinen Brauhelfer2
-  * Maische Malz und Mehr
-  * BrewFather
-* Rezept Export
-* Unterstützung für 3,5" HMI Touchdisplay Nextion
 
 ## 📚 Dokumentation
 
