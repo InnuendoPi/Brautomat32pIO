@@ -1,3 +1,7 @@
+sdkconfig.*
+sdkconfig.defaults
+sdkconfig.wemos_d1_mini32_IDF5dev
+sdkconfig.wemos_d1_mini32_IDF5
 .pio
 .vscode/.browse.c_cpp.db*
 .vscode/c_cpp_properties.json
@@ -22,5 +26,3 @@ boards/
 *.py
 *.txt
 dependencies.lock
-sdkconfig.defaults
-sdkconfig.wemos_d1_mini32_IDF5dev

@@ -41,8 +41,9 @@ _pIO Versionen sind nicht kompatibel mit Brautomat32. Vor der Installation die K
 
 ## 📚 Changelog
 
-Version 1.48
+Version 1.48.1
 
+* Update:       Dallas temperature lib 4.0.1 (err handling, fix device search)
 * Update:       Arduino core 3.1.1 based on IDF 5.3.2.250106
 * Neu:          Link nach gitbook für Parameter Voreinstellungen Import eingefügt
 * Geändert:     bei Klick auf Prev oder Next wird der Status Button Play zurückgesetzt (ein dekativiertes autonext wird aufgehoben)
