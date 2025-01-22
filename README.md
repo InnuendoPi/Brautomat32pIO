@@ -41,9 +41,12 @@ _pIO Versionen sind nicht kompatibel mit Brautomat32. Vor der Installation die K
 
 ## 📚 Changelog
 
-Version 1.48.1
+Version 1.48.2
 
-* Update:       Dallas temperature lib 4.0.1 (err handling, fix device search)
+* Neu:          Im Relais Modus kann der GPIO nun invertiert werden
+* Fix:          Freigabe GPIOs bei Wechsel Kesseltyp (off, IDS, Relais) korrigiert
+* Fix:          Fehler in der Profilverwaltung behoben
+* Update:       Dallas Temperature Bibliothek 4.0.1 (fix err handling, fix device search)
 * Update:       Arduino core 3.1.1 based on IDF 5.3.2.250106
 * Neu:          Link nach gitbook für Parameter Voreinstellungen Import eingefügt
 * Geändert:     bei Klick auf Prev oder Next wird der Status Button Play zurückgesetzt (ein dekativiertes autonext wird aufgehoben)
