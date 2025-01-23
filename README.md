@@ -41,8 +41,11 @@ _pIO Versionen sind nicht kompatibel mit Brautomat32. Vor der Installation die K
 
 ## 📚 Changelog
 
-Version 1.48.3
+Version 1.48.4
 
+* Geändert:     Der Sonderbefehl IDSPROFIL prüft vor dem Profilwechsel den Gerätetyp
+* Fix:          SensorID wurde im Sonderbefehl IDSPROFIL nicht korrekt übertragen
+* Update:       Dallas Temperature Bibliothek 4.0.3
 * Fix:          Bei Profilwechsel und Sonderbefehl IDSPROFIL wurde der Status GPIO invertieren im Relais Modus nicht korrekt übernommen
 * Geändert:     default Status GPIO invertieren in der Kessel Konfiguration auf false gesetzt
 * Neu:          Im Relais Modus kann der GPIO nun invertiert werden
