@@ -43,8 +43,9 @@ _pIO Versionen sind nicht kompatibel mit Brautomat32. Vor der Installation die K
 
 Version 1.48.6
 
-* Geändert:     WebUpdate Testzweig eingerichtet
-* Geändert:     branch development auf github erstellt.
+* Geändert:     ajax synchronous get requests
+* Geändert:     WebUpdate Testzweig 32pio eingerichtet
+* Geändert:     branch development brautomat32pIO auf github erstellt
 * Fix:          Button "Nachguss löschen" wurde aus WebIf ohne Kessel ID übermittelt
 * Fix:          wurde vor dem Power Button Maischeplan Sud oder HLT eingeschaltet, wurde ein Sonderbefehl als erster Maischeschritt nicht ausgeführt
 * Fix:          sehr langsame Reaktion im Relais Modus behoben
