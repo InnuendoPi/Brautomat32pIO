@@ -41,8 +41,9 @@ _pIO Versionen sind nicht kompatibel mit Brautomat32. Vor der Installation die K
 
 ## 📚 Changelog
 
-Version 1.48.6
+Version 1.48.7
 
+* Fix:          Fehler im Modul Aktoren UpdatePower behoben
 * Geändert:     ajax synchronous get requests
 * Geändert:     WebUpdate Testzweig 32pio eingerichtet
 * Geändert:     branch development brautomat32pIO auf github erstellt
