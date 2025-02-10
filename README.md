@@ -41,8 +41,13 @@ _pIO Versionen sind nicht kompatibel mit Brautomat32. Vor der Installation die K
 
 ## 📚 Changelog
 
-Version 1.48.7
+Version 1.48.8
 
+* Update:       VSCode 1.97
+* Update:       Dallas Temperature Bibliothek 4.0.4
+* Fix:          Temperatur Übergang Kochen wurde nicht korrekt an PID Controller übertragen, wenn der Brauprozess nach Neustart (stromlos) fortgesetzt wurde
+* Fix:          Debugausgaben ThresTemp und ThresOutput typo im Modul Konfigurationsdatei
+* Geändert:     InnuAPID Bibliothek V 1.4: Überprüfung Temperatur Übergang Kochen angepasst
 * Geändert:     Die Nachricht "WebUpdate abgeschlossen" mit auto reload wurde "manchmal" nicht angezeigt
 * Fix:          Fehler im Modul Aktoren UpdatePower behoben
 * Geändert:     ajax synchronous get requests
