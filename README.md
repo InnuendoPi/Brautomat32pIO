@@ -44,7 +44,7 @@ _pIO Versionen sind nicht kompatibel mit Brautomat32. Vor der Installation die K
 Version 1.48.9
 
 * Geändert:     Abfrageintervall Sensoren von Minimum SampleTime MAISCHE, SUD und HLT auf festen Wert 2000ms gesetzt
-* Geändert:     SampleTime Bereich 1000 bis 60000 vergrößert (1sek bis 60sek)
+* Geändert:     neuer Parameter DutyCycle im Relais Modus (1000ms bis 60000ms). Default 5000
 * Geändert:     InnuAPID Bibliothek Übergabe KettleID für debug Ausgaben hinzugefügt (default 0)
 * Geändert:     InnuAPID Bibliothek Berechnung der benötigten Leistung wenn lastTime null ist
 * Fix:          Fehler in setProfil D Parameter behoben
