@@ -41,8 +41,13 @@ _pIO Versionen sind nicht kompatibel mit Brautomat32. Vor der Installation die K
 
 ## 📚 Changelog
 
-Version 1.48.8
+Version 1.48.9
 
+* Geändert:     Abfrageintervall Sensoren von Minimum SampleTime MAISCHE, SUD und HLT auf festen Wert 2000ms gesetzt
+* Geändert:     SampleTime Bereich 1000 bis 60000 vergrößert (1sek bis 60sek)
+* Geändert:     InnuAPID Bibliothek Übergabe KettleID für debug Ausgaben hinzugefügt (default 0)
+* Geändert:     InnuAPID Bibliothek Berechnung der benötigten Leistung wenn lastTime null ist
+* Fix:          Fehler in setProfil D Parameter behoben
 * Update:       VSCode 1.97
 * Update:       Dallas Temperature Bibliothek 4.0.4
 * Fix:          Temperatur Übergang Kochen wurde nicht korrekt an PID Controller übertragen, wenn der Brauprozess nach Neustart (stromlos) fortgesetzt wurde
