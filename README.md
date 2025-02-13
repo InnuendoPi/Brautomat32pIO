@@ -41,94 +41,17 @@ _pIO Versionen sind nicht kompatibel mit Brautomat32. Vor der Installation die K
 
 ## 📚 Changelog
 
-Version 1.48.9
+Version 1.48.10
 
+* Geändert:     träges WebIf Part 4: Ausblenden von Objekten überarbeitet
+* Geändert:     träges WebIf Part 3: request Zeitkorrektur nach Stromlos/-Ausfall überarbeitet
+* Geändert:     träges WebIf Part 2: request & response handling überarbeitet
+* Fix:          träges WebIf Part 1: Server response mime Format für JSON korrigiert
 * Geändert:     Abfrageintervall Sensoren von Minimum SampleTime MAISCHE, SUD und HLT auf festen Wert 2000ms gesetzt
 * Geändert:     neuer Parameter DutyCycle im Relais Modus (1000ms bis 60000ms). Default 5000
 * Geändert:     InnuAPID Bibliothek Übergabe KettleID für debug Ausgaben hinzugefügt (default 0)
 * Geändert:     InnuAPID Bibliothek Berechnung der benötigten Leistung wenn lastTime null ist
 * Fix:          Fehler in setProfil D Parameter behoben
-* Update:       VSCode 1.97
-* Update:       Dallas Temperature Bibliothek 4.0.4
-* Fix:          Temperatur Übergang Kochen wurde nicht korrekt an PID Controller übertragen, wenn der Brauprozess nach Neustart (stromlos) fortgesetzt wurde
-* Fix:          Debugausgaben ThresTemp und ThresOutput typo im Modul Konfigurationsdatei
-* Geändert:     InnuAPID Bibliothek V 1.4: Überprüfung Temperatur Übergang Kochen angepasst
-* Geändert:     Die Nachricht "WebUpdate abgeschlossen" mit auto reload wurde "manchmal" nicht angezeigt
-* Fix:          Fehler im Modul Aktoren UpdatePower behoben
-* Geändert:     ajax synchronous get requests
-* Geändert:     WebUpdate Testzweig 32pio eingerichtet
-* Geändert:     branch development brautomat32pIO auf github erstellt
-* Fix:          Button "Nachguss löschen" wurde aus WebIf ohne Kessel ID übermittelt
-* Fix:          wurde vor dem Power Button Maischeplan Sud oder HLT eingeschaltet, wurde ein Sonderbefehl als erster Maischeschritt nicht ausgeführt
-* Fix:          sehr langsame Reaktion im Relais Modus behoben
-* Fix:          noiseband und Temperatur delta zum Ziel wurden nicht korrekt im Profil gespeichert
-* Geändert:     in der Chart Legende werden die Kesselnamen angezeigt. Die Zieltemperaturen mit dem postfix "target"
-* Update:       Chart.js 4.4.1
-* Geändert:     Ist und Soll Temperatur Kessel Sud in die Chart eingefügt
-* Geändert:     Der Sonderbefehl IDSPROFIL prüft vor dem Profilwechsel den Gerätetyp
-* Fix:          SensorID wurde im Sonderbefehl IDSPROFIL nicht korrekt übertragen
-* Update:       Dallas Temperature Bibliothek 4.0.3
-* Fix:          Bei Profilwechsel und Sonderbefehl IDSPROFIL wurde der Status GPIO invertieren im Relais Modus nicht korrekt übernommen
-* Geändert:     default Status GPIO invertieren in der Kessel Konfiguration auf false gesetzt
-* Neu:          Im Relais Modus kann der GPIO nun invertiert werden
-* Fix:          Freigabe GPIOs bei Wechsel Kesseltyp (off, IDS, Relais) korrigiert
-* Fix:          Fehler in der Profilverwaltung behoben
-* Update:       Dallas Temperature Bibliothek 4.0.1 (fix err handling, fix device search)
-* Update:       Arduino core 3.1.1 based on IDF 5.3.2.250106
-* Neu:          Link nach gitbook für Parameter Voreinstellungen Import eingefügt
-* Geändert:     bei Klick auf Prev oder Next wird der Status Button Play zurückgesetzt (ein dekativiertes autonext wird aufgehoben)
-* Fix:          Auswertung Sonderbefehle bei Klick auf den Button Play korrigiert
-* Fix:          der PID Controller wurde mit dem Sonderbefehl IDS nicht korrekt gestartet, wenn die IDS ausgeschaltet war
-* Fix:          Verzögerung Ablauf Maischeplan behoben, wenn die Rastdauer mit 0s eingetragen war
-* Geändert:     Parameter Temperatur Kochen wurde in die Einstellungen Maischeplan verschoben
-* Fix:          InnuAPID PID Controller debug Ausgaben aktuelle Leistung typo
-* Fix:          Korrekturen html und CSS
-* Fix:          Korrektur Links nach gitbook
-* Geändert:     Sensor Informationen als Tab eingefügt
-* Fix:          Korrektur Links nach gitbook
-* Geändert:     Sensor Informationen als Tab eingefügt
-* Fix:          es ist nun möglich, alle PID Parameter für Maische, Sud und HLT bei aktivem PID Controller (beim Brauen) anzupassen
-* Fix:          wenn SoftSerial keinen oder einen fehlerhaften Wert für den PowerButton von Display im manuellen Modus liefert
-* Geändert:     Modul checkIDSState Kessel Sud
-* Neu:          Auswahl Gerätetyp GGM oder Relais für Maische und Sud
-* Fix:          Korrektur Sprachdateien für das Objekt SUD
-* Fix:          Korrektur Pin Interrupt handling zweite GGM IDS
-* Fix:          Korrektur task watchdog timer ESP32 IDF5.x (platformIO)
-* Update:       Erläuterungen Steuerbefehle in der Anleitung erweitert
-* Fix:          Debug Ausgaben Braustatus Flash (read/write/erase)
-* Geändert:     deprecated lib EEPROM durch Preferences für ESP32 ersetzt (save states in flash)
-* Fix:          Casting private ArduinoJSON objects (Update 7.3)
-* Update:       ArduinoJSON 7.3
-* Update:       VSCode 1.96
-* Fix:          die Berechnung der erforderlichen Leistung IDS (PID Controller) bei einem Sensorfehler (-127 Grad) nicht mehr ausgeführt
-* Fix:          Einlesen Maischeplan nach Stromunterbrechung: Zuweisung Maische, Sud, HLT, Steuerbefehl oder Aktor korrigiert
-* Fix:          Fehler Hinzufügen/Entfernen von Maischeschritte behoben, wenn der Brauprozess gestartet ist
-* Update:       Nextion Display Dateien aktualisiert
-* Fix:          Brautomat Status nach Stromunterbrechung (verschiedene Zustände korrigiert)
-* Fix:          typedef time_t
-* Fix:          Das Logging für den Maischeprozess war zu Debugzwecken fest auf VERBOSE eingestellt
-* Neu:          Toast Message, wenn der Rast Timer nach einer Unterbrechung angeapsst wurde
-* Fix:          Webhook Nachguss wurde nicht korrekt verarbeitet
-* Fix:          TickerMash Status war nach Reset/Stromunterbrechung bei deaktiviertem autonext nicht korrekt
-* Geändert:     die Dauer einer Stromunterbrechung während einer aktiven Rast (Timer läuft), wird nach dem Neustart von der Rastzeit automatisch abgezogen
-* Neu:          es wird ein Zeitstempel mitgespeichert, um die Dauer einer Unterbrechung bemessen zu können
-* Geändert:     die aktuelle Rastzeit wird nun im 10s Takt in Sekunden statt Restminuten alle 60s gespeichert
-* Fix:          Autorestart Maischestep nach Reset oder Ausschalten, wenn Timer noch nicht gestartet war
-* Fix:          Anzeige Restzeit Maischestep nach Reset oder Ausschalten nicht korrekt
-* Fix:          Nachguss/Sud ein oder ausschalten ohne Braustart hat fehlerhaft den Brauprozess gestartet.
-* Neu:          Webhook für Nachguss
-* Neu:          Webhook für Aktoren
-* Geändert:     im WebIf Aktoren werden PWM und invertieren passend zur Auswahl GPIO/Webhook ein- bzw. ausgeblendet
-* Fix:          default Kesselname gesetzt
-* Neu:          Eigenschaft Name hinzugefügt
-* Neu:          zweites Induktionskochfeld "SUD" kann mit dem Brautomat gesteuert werden
-* Neu:          neuer Sonderbefehl SUD für die zweite GGM IDS
-* Neu:          Display Firmware Anzeige Kesselübersicht um zweites Induktionskochfeld erweitert
-* Geändert:     Sonderbefehle können auch Dauer und Temperatur verarbeiten
-* Geändert:     im Display wird auf der Seite Kesselübersicht der Name angezeigt
-* Fix:          Suche nach DS18B20 Adressen korrigiert
-* Update:       VSCode 1.95
-* Update:       ESP32 Arduino 3.0.7 ESP-IDF v5.1.4
 
 ## 📚 Dokumentation
 

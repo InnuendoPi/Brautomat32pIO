@@ -206,7 +206,7 @@
     "IDS_TEXT6": "Profil erstellen:",
     "IDS_TEXT7": "Profil wechseln:",
     "IDS_TEXT8": "Profil entfernen:",
-    "IDS_DUTY": "Relais dutycycle [5000]",
+    "IDS_DUTY": "Relais Schaltzyklus [5000]",
     "IDS_TT_SEN": "Sensorauswahl an MaischeSud Kessel",
     "IDS_TT_MAXO": "Maximale Leistung der IDS im Maischeprozess",
     "IDS_TT_DELTA": "Erlaubte Differenz zwischen Ziel- und Ist-Temperatur für den Start der aktuellen Rast",
