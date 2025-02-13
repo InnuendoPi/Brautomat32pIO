@@ -1,6 +1,6 @@
 # Changelog
 
-ESP32 Arduino 3.1.1 ESP-IDF v5.3.2.241224
+ESP32 Arduino 3.1.2 ESP-IDF v5.3.2.250210
 VSCode 1.97 pioarduino
 InnuAPID AutoTune PID lib
 InnuTicker Task Scheduler lib
@@ -9,8 +9,10 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.48.10
+Version 1.48.11
 
+* Geändert:     Verarbeitung der Kettle Parameter url, dutycycle und invert überarbeitet
+* Update:       Arduino core 3.1.2
 * Geändert:     träges WebIf Part 4: Ausblenden von Objekten überarbeitet
 * Geändert:     träges WebIf Part 3: request Zeitkorrektur nach Stromlos/-Ausfall überarbeitet
 * Geändert:     träges WebIf Part 2: request & response handling überarbeitet
