@@ -41,8 +41,10 @@ _pIO Versionen sind nicht kompatibel mit Brautomat32. Vor der Installation die K
 
 ## 📚 Changelog
 
-Version 1.48.11
+Version 1.48.12
 
+* Downgrade:    Arduino core 3.1.1 wegen Fehler in 53.03.12
+* Geändert:     Nachguss für Verwendung mit IDS erweitert (wegen Downgrade noch nicht abgeschlossen)
 * Geändert:     Verarbeitung der Kettle Parameter url, dutycycle und invert überarbeitet
 * Update:       Arduino core 3.1.2
 * Geändert:     träges WebIf Part 4: Ausblenden von Objekten überarbeitet
