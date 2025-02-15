@@ -9,8 +9,13 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.48.12
+Version 1.48.13
 
+* Geändert:     WebIf Optimierung abgeschlossen
+* Geändert:     Kessel Sud für die Verwendung von Webhooks erweitert
+* Geändert:     einheitliche Optik für die Einstellungen Kessel Maische, Sud an Nachguss
+* Gerändert:    Nachguss Tab Temperatursteuerung eingefügt
+* Geändert:     Button Nachguss löschen entfernt. Funktion wird mit Auswahl deaktiviert ausgeführt
 * Downgrade:    Arduino core 3.1.1 wegen Fehler in 53.03.12 (Exception)
 * Geändert:     Nachguss für Verwendung mit IDS erweitert (wegen Downgrade noch nicht abgeschlossen)
 * Geändert:     Verarbeitung der Kettle Parameter url, dutycycle und invert überarbeitet
