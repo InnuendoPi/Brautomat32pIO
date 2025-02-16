@@ -9,8 +9,15 @@ InnuLog Debug lib serial monitor
 InnuFramework CSS/JS bootstrap 4.6.2
 Server Sent Events (6 SSE channels)
 
-Version 1.48.13
+Version 1.48.14
 
+* Update:       Arduino core 3.1.2 pioArduino 53.03.12 with Fix #10972 (String nullptr)
+* Geändert:     Webhook URL für Maischekessel aktiviert
+* Geändert:     Profile um Webhook URL erweitert
+* Neu:          Sonderbefehl SUDPROFIL
+* Neu:          Sonderbefehl HLTPROFIL, alternativ NACHGUSSPROFIL
+* Neu:          Sonderbefehl MAISCHEPROFIL als Alternative für IDSPROFIL
+* Geändert:     Kesselprofile für Sud und Nachguss hinzugefügt
 * Geändert:     WebIf Optimierung abgeschlossen
 * Geändert:     Kessel Sud für die Verwendung von Webhooks erweitert
 * Geändert:     einheitliche Optik für die Einstellungen Kessel Maische, Sud an Nachguss
