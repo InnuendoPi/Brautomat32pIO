@@ -39,3 +39,4 @@ boards/
 *.old
 dependencies.lock
 mklittlefs.exe
+firmware.bin14815
